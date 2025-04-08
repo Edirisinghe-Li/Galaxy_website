@@ -1,0 +1,1004 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*
+	{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		scroll-behavior:smooth;
+		font-family: 'Poppins', sans-serif;
+		color: #fff;
+	}
+body
+	{
+		min-height:200vh;
+		background:#000;
+	}
+h3
+	{
+		font-family: 'Poppins', sans-serif;
+		color: #fff;
+	}
+li
+	{
+		font-family: 'Poppins', sans-serif;
+		color: #fff;
+		font-size: 15px;
+		line-height: 25px;
+	}
+nav
+	{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		transition:0.6s;
+		padding:40px 100px;
+		z-index:10000;
+	}
+nav.sticky
+	{
+		padding:10px 100px;
+		background-color:#000;
+	}
+nav .logo img
+	{
+		width: 40px;
+		height: 40px;
+	
+	}
+nav .logo
+	{
+		position:relative;
+		font-family: 'Poppins', sans-serif;
+		font-weight:500;
+		color:#fff;
+		text-decoration:none;
+		font-size:1.5em;
+		letter-spacing:2px;
+		transition:0.6s;
+		float:left;
+		margin-left:50px;
+		margin-top:5px;
+	}
+.nav-links
+	{
+		display:flex;
+		list-style:none;
+		width:50%;
+		height:100%;
+		justify-content:space-around;
+		align-items:center;
+		margin-left:auto;
+	}
+.nav-links li a
+	{
+		position:relative;
+		margin:0 15px;
+		text-decoration:none;
+		color:#fff;
+		letter-spacing:2px;
+		font-weight:500;
+	}
+.nav-links li a:hover
+	{
+		color:#4DD0F8;
+	}
+.nav-links li.active a
+	{
+		color:#4DD0F8;
+		border-style:solid;
+		border-color:#4DD0F8;
+		border-radius:5px;
+		padding:5px 10px;	
+	}
+.landing
+	{
+		height:0vh;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+.landing h1
+	{
+		margin:100px;
+		font-size:50px;
+		color:blue;
+	}
+.banner
+	{
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+	}
+#banner_mission
+	{
+		background: url(img/1.jpg);
+		background-size: cover;
+		
+	}
+#banner_space
+	{
+		background: url(img/3.jpg);
+		background-size: cover;
+	}
+.banner:before
+	{
+		content:'';
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:400px;
+		z-index:1;
+		background:linear-gradient(to top,#000,transparent);
+	}
+.banner .banner-content
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 5%;
+	}
+.banner .banner-content h2
+	{
+		color: #fff;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+		font-size: 7em;
+		line-height: 0.5em;
+		z-index: 1000;
+		font-weight: 500;
+	}
+.banner .banner-content h4
+	{
+		color: #fff;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+		font-size: 2em;
+		z-index: 1000;
+		font-weight: 500;
+		margin-top: 20px;
+	}
+.block
+	{
+		position: absolute;
+		width: 60px;
+		height: 50px;
+		background: url(img/asteroid.png);
+		background-size: cover;
+	}
+.introduction
+	{
+		position: relative;
+		width:100%;
+		margin-top: 150px;
+		margin-bottom: 150px;
+		justify-content: center;
+		align-items: center;
+	}
+.introduction .mission_container
+	{
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		padding: 20%;
+			
+	}
+.introduction .mission
+	{
+		list-style-type: none;
+	}
+.introduction .introduction-content
+	{
+		position: relative;
+		width:80%;
+		justify-content: center;
+		align-content: center;
+		margin: auto;
+	}
+.introduction .introduction-content h2
+	{
+		position: relative;
+		font-family: 'Poppins', sans-serif;
+		font-size: 4.5em;
+		font-weight: 500;
+		color: #fff;
+		text-align: left;
+	}
+.introduction .introduction-content p
+	{
+		position: relative;
+		font-family: 'Poppins', sans-serif;
+		font-size: 14px;
+		color: #999;
+		text-align: justify;
+		margin-top: 30px;
+	}
+.introduction .introduction-video
+	{
+		position: relative;
+		width: 80%;
+		height:80vh;
+		overflow:hidden;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		margin-top: 75px;
+	}
+.introduction .introduction-video video
+	{
+		position:absolute;
+		top:0;
+		left:0;
+		object-fit:cover;
+		width:100%;
+		height:100%;
+		pointer-events:none;
+	}
+.information-1
+	{
+		position: relative;
+		display: flex;
+		margin-top: 150px;
+		margin-bottom: 150px;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+.information-1 .information-container
+	{
+		position:relative;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		flex-wrap:wrap;
+		width:100%;
+		background-color:000;
+		padding:50px;
+	}
+.information-1 .information-container .card
+	{
+		width:300px;
+		height:400px;
+		margin:20px;
+		padding:40px 30px;
+		background-color:#000;
+		color: #fff;
+		border-radius:40px;
+		box-shadow:-6px -6px 20px rgba(255,255,255,0.1),
+					6px 6px 20px rgba(255,153,0,1);
+	}
+.information-1 .information-container .card:hover
+	{
+		box-shadow:inset -6px -6px 10px rgba(255,153,0,0.5),
+					inset 5px 5px 10px rgba(255,153,0,1);
+	}
+.information-1 .information-container .card .imgBox
+	{
+		position:relative;
+		text-align:center;
+	}
+.information-1 .information-container .card .imgBox img
+	{
+		max-height:100px;
+	}
+.information-1 .information-container .card .detail
+	{
+		position:relative;
+		margin-top:20px;
+		text-align:center;
+	}
+.information-1 .information-container .card .detail h2
+	{
+		font-family:'Poppins', sans-serif;
+		font-size:1.4em;
+		margin-bottom:20px;
+		font-weight:bolder;
+	}
+.information-1 .information-container .card .detail p
+	{
+		font-family:'Poppins', sans-serif;
+		margin-bottom:20px;
+		font-size:12px;
+	}
+.information-1 .information-container .card .detail a
+	{
+		display:inline-block;
+		padding:10px 20px;
+		margin-top:10px;
+		border-radius:40px;
+		font-weight:bolder;
+		color:#fff;
+		font-size:16px;
+		text-decoration:none;
+		box-shadow:-3px -3px 10px rgba(255,255,255,0.1),
+					3px 3px 10px rgba(255,153,0,1);
+	}
+.information-1 .information-container .card .detail a:hover
+	{
+		color:#fff;
+		box-shadow:inset -6px -6px 10px rgba(255,153,0,0.5),
+					inset 5px 5px 10px rgba(255,153,0,1);
+	}
+.information-1 .information-container .card a:hover span
+	{
+		display:block;
+		transform:scale(0.98);
+	}
+.information-1 .information-container .card:hover .imgBox,
+.information-1 .information-container .card:hover .detail
+	{
+		transform:scale(0.98);
+	}
+.fitBg
+	{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		opacity:0.8;
+	}
+.banner2
+	{
+		position:relative;
+		width:100%;
+		min-height:100vh;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+.banner2:before
+	{
+		content:'';
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:200px;
+		z-index:1;
+		background:linear-gradient(to top,#000,transparent);
+	}
+.banner2:after
+	{
+		content:'';
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:200px;
+		z-index:1;
+		background:linear-gradient(to bottom,#000,transparent);
+	}
+.introduction .planet-introduction
+	{
+		position: relative;
+		width:80%;
+		justify-content: center;
+		align-content: center;
+		margin: auto;
+	}
+.introduction .planet-introduction h2
+	{
+		position: relative;
+		font-family: 'Poppins', sans-serif;
+		font-size: 3em;
+		font-weight: 500;
+		color: #fff;
+		text-align: center;
+	}
+.introduction .planet-introduction p
+	{
+		position: relative;
+		font-family: 'Poppins', sans-serif;
+		font-size: 14px;
+		color: #999;
+		text-align: justify;
+		margin-top: 30px;
+	}
+.planet
+	{
+		position:relative;
+		width:80%;
+		margin:100px auto 0;
+		margin-bottom:100px;
+		height:auto;
+		display:grid;
+		grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-rows:auto 1fr auto;
+		grid-gap:60px;
+		font-family: 'Poppins', sans-serif;
+		background: #000;
+	}
+.planet .planet-card
+	{
+		position: relative;
+		width: 300px;
+		height: 350px;
+		margin: 50px auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		border-radius: 20px;
+		background: #000;
+		/*box-shadow:-6px -6px 20px rgba(255,255,255,0.1),
+						6px 6px 20px rgba(255,153,0,1);*/
+
+	}
+.planet .planet-card:hover
+	{
+		height: 420px;
+	}
+.planet .planet-card img
+	{
+		position: absolute;
+		bottom: 30%;
+		left: 50%;
+		transform: translateX(-50%);
+		width:200px;
+		transition: 0.5s;
+	}
+.planet .planet-card:hover img
+	{
+		left: 50%;
+		width:150px;
+		bottom: 5%;
+	}
+.planet .planet-card .planet-content
+	{
+		position: relative;
+		width: 100%;
+		left: 0;
+		padding:30px;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s;
+	}
+.planet .planet-card:hover .planet-content
+	{
+		left: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+.planet .planet-card .planet-content h2
+	{
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		font-weight: 500;
+		line-height: 1em;
+		margin-bottom: 20px;
+	}
+.planet .planet-card .planet-content p
+	{
+		color: #fff;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+.planet .planet-card .planet-content a
+	{
+		position: relative;
+		display: inline-block;
+		color: #fff;
+		padding: 5px 10px;
+		border-radius: 5px;
+		background: #111;
+		margin-top: 10px;
+		text-decoration: none;
+		font-size: 12px;
+	}
+.card_solar
+	{
+		position: relative;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		width: 100%;
+		padding: 5%;
+		margin-top: 10%;
+	}
+.card_solar .planetcard_solar
+	{
+		position: relative;
+		width: 600px;
+		height: 350px;
+		margin: 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: 20px;
+		background: #000;
+		padding: 5%;
+		
+	}
+.card_solar .planetcard_solar img
+	{
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		/*height: 250px;*/
+		transition: 0.5s;
+	}
+.card_solar .planetcard_solar #sun_img
+{
+	height: 450px;
+}
+.card_solar .planetcard_solar #mercury_img
+{
+	height: 100px;
+}
+.card_solar .planetcard_solar #venus_img
+{
+	height: 150px;
+}
+.card_solar .planetcard_solar #earth_img
+{
+	height: 180px;
+}
+.card_solar .planetcard_solar #mars_img
+{
+	height: 200px;
+}
+.card_solar .planetcard_solar #jupiter_img
+{
+	height: 310px;
+}
+.card_solar .planetcard_solar #saturn_img
+{
+	height: 270px;
+}
+.card_solar .planetcard_solar #uranus_img
+{
+	height: 240px;
+}
+.card_solar .planetcard_solar #neptune_img
+{
+	height: 220px;
+}
+
+.card_solar .planetcard_solar:hover img
+	{
+		left: 80%;
+		bottom: 0;
+	}
+.card_solar .planetcard_solar .content_solar
+	{
+		position: relative;
+		width: 50%;
+		left: 20%;
+		padding: 20px 20px 20px 40px;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s;
+	}
+.card_solar .planetcard_solar:hover .content_solar
+	{
+		opacity: 1;
+		visibility:visible;
+		left: 0%;
+	}
+.card_solar .planetcard_solar .content_solar h2
+	{
+		text-transform: uppercase;
+		font-size: 2.5em;
+		line-height: 1em;
+	}
+.card_solar .planetcard_solar .content_solar p
+	{
+		font-size: 12px;
+	}
+.card_solar .planetcard_solar .content_solar a
+	{
+		position: relative;
+		display: inline-block;
+		font-size: 12px;
+		color: #111;
+		padding: 5px 10px;
+		border-radius: 10px;
+		background: #fff;
+		margin-top: 10px;
+		text-decoration: none;
+}
+.footer
+{
+	width: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	margin-top:100px;
+	bottom: 0;
+	padding: 20px;
+	backdrop-filter:blur(15px);
+	box-shadow:0 -10px 10px rgba(0,0,0,0.1);
+	border:1px solid rgba(255,255,255,0.2);
+}
+.footer .sci
+{
+	position:relative;
+	display:flex;
+}
+.footer .sci li
+{
+	list-style:none;
+}
+.footer .sci li a
+{
+	text-decoration:none;
+	margin:0 20px;
+}
+.footer .sci li a i
+{
+	color:#fff;
+	font-size:14px;
+}
+.footer .sci li a:hover i
+{
+	color:#1275BD;
+	font-size:14px;
+}
+.copyrightText
+{
+	margin-top:20px;
+	color:#fff;
+	font-size:14px;
+	font-weight:300;
+	text-align:center;
+	width:80%;
+}
+.copyrightText a
+{
+	color:#1275BD;
+	text-decoration:none;
+}
+.copyrightText a:hover
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+@media (max-width:991px)
+{
+	.card_solar .planetcard_solar
+	{
+		position: relative;
+		width: auto;
+		max-width: 600px;
+		transition: 0.5s;
+		align-items: flex-start;
+	}
+	.card_solar .planetcard_solar:hover
+	{
+		height: 500px;
+	}
+	.card_solar .planetcard_solar:hover img
+	{
+		left:50%;
+		height: 220px;
+		bottom: 5%;
+	}
+	.card_solar .planetcard_solar .content_solar
+	{
+		position: relative;
+		width: 100%;
+		left: 0;
+		padding: 40px;
+	}
+	.card_solar .planetcard_solar #sun_img,
+	.card_solar .planetcard_solar #mercury_img,
+	.card_solar .planetcard_solar #venus_img,
+	.card_solar .planetcard_solar #earth_img,
+	.card_solar .planetcard_solar #mars_img,
+	.card_solar .planetcard_solar #jupiter_img,
+	.card_solar .planetcard_solar #saturn_img,
+	.card_solar .planetcard_solar #uranus_img,
+	.card_solar .planetcard_solar #neptune_img
+	{
+		height: 350px;
+	}
+	.information-1 .information-container .card .detail a
+	{
+		font-size: 12px;
+		padding: 5px, 10px;
+	}
+	.information-1 .information-container .card .imgBox img
+	{
+		max-height:60px;
+	}
+}
+
+@media screen and (max-width:768px)
+	{
+		
+		.navbar .line
+		{
+			width:25px;
+			height:2.5px;
+			background:white;
+			margin:5px;
+		
+		}
+		nav
+			{
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				display:flex;
+				justify-content:space-between;
+				align-items:center;
+				transition:0.6s;
+				padding:40px 25px;
+				z-index:10000;
+			}
+		nav.sticky
+			{
+				padding:10px 25px;
+				background-color:#111;
+			}
+		nav .logo
+			{
+				margin-left:5px;
+			}
+		.navbar
+			{
+				position:absolute;
+				cursor:pointer;
+				right:5%;
+				top:50%;
+				transform:translate(-5%, -50%);
+				z-index:6;
+			}
+		.nav-links
+			{
+				position:fixed;
+				background:#111;
+				height:100vh;
+				width:100%;
+				flex-direction:column;
+				clip-path:circle(100px at 90% -20%);
+				-webkit-clip-path:circle(100px at 90% -20%);
+				transition:all 0.2s ease-out;
+				pointer-event:none;
+				z-index:5;
+				padding-top:50%;
+				padding-bottom:50%;
+			}
+		.nav-links.open
+			{
+				clip-path:circle(10000px at 90% -20%);
+				-webkit-clip-path:circle(10000px at 90% -20%);
+				pointer-event:all;
+				bottom:0;
+				left:0;
+			}
+		.landing
+			{
+				flex-direction:column;
+			}
+		.nav-links li
+			{
+				opacity:0;
+			}
+		.nav-links li.active a
+			{
+				color:#4DD0F8;
+				border:none;
+				border-style:none;
+				border-color:none;
+				border-radius:0px;
+				padding:0;	
+			}
+		.nav-links li a
+			{
+				font-size:15px;
+			}
+		.nav-links li:nth-child(1)
+			{
+				transition:all 0.02s ease 0.01s;
+			}
+		.nav-links li:nth-child(2)
+			{
+				transition:all 0.02s ease 0.02s;
+			}
+		.nav-links li:nth-child(3)
+			{
+				transition:all 0.02s ease 0.03s;
+			}
+		.nav-links li:nth-child(4)
+			{
+				transition:all 0.02s ease 0.04s;
+			}
+		.nav-links li:nth-child(5)
+			{
+				transition:all 0.02s ease 0.05s;
+			}
+		.nav-links li:nth-child(6)
+			{
+				transition:all 0.02s ease 0.06s;
+			}
+		
+		li.fade
+			{
+				opacity:1;
+			}
+		.banner .banner-content h2
+			{
+				font-size: 3em;
+			}
+		.banner .banner-content h4
+			{
+				font-size: 1.5em;
+			}
+		.introduction .introduction-content h2
+			{
+				font-size: 2.5em;
+			}
+		.introduction .introduction-content p
+			{
+				font-family: 13px;
+			}
+		.planet
+			{
+				flex-direction: column;
+			}
+		.introduction .planet-introduction h2
+			{
+				font-size: 2.5em;
+			}
+		.introduction .planet-introduction p
+			{
+				font-family: 13px;
+			}
+		.card_solar .planetcard_solar #sun_img,
+		.card_solar .planetcard_solar #mercury_img,
+		.card_solar .planetcard_solar #venus_img,
+		.card_solar .planetcard_solar #earth_img,
+		.card_solar .planetcard_solar #mars_img,
+		.card_solar .planetcard_solar #jupiter_img,
+		.card_solar .planetcard_solar #saturn_img,
+		.card_solar .planetcard_solar #uranus_img,
+		.card_solar .planetcard_solar #neptune_img
+		{
+			height: 250px;
+		}
+		.card_solar .planetcard_solar:hover #sun_img,
+		.card_solar .planetcard_solar:hover #mercury_img,
+		.card_solar .planetcard_solar:hover #venus_img,
+		.card_solar .planetcard_solar:hover #earth_img,
+		.card_solar .planetcard_solar:hover #mars_img,
+		.card_solar .planetcard_solar:hover #jupiter_img,
+		.card_solar .planetcard_solar:hover #saturn_img,
+		.card_solar .planetcard_solar:hover #uranus_img,
+		.card_solar .planetcard_solar:hover #neptune_img
+		{
+			height: 220px;
+		}
+	}
+@media screen and (max-width:450px)
+	{
+		.navbar .line
+			{
+				width:15px;
+				height:1.5px;
+				background:white;
+				margin:3px;
+			}
+		nav .logo
+			{
+				margin-left:5px;
+				font-size:20px;
+			}
+		.nav-links
+			{
+				position:fixed;
+				background:#111;
+				height:100vh;
+				width:100%;
+				flex-direction:column;
+				clip-path:circle(100px at 90% -20%);
+				-webkit-clip-path:circle(100px at 90% -20%);
+				transition:all 0.05s ease-out;
+				pointer-event:none;
+				z-index:5;
+				padding-top:50%;
+				padding-bottom:50%;
+			}
+		.nav-links li.active a
+			{
+				color:#4DD0F8;
+				border:none;
+				border-style:none;
+				border-color:none;
+				border-radius:0px;
+				padding:0;	
+			}
+		.nav-links li a
+			{
+				font-size:16px;
+			}
+		.banner .banner-content h2
+			{
+				font-size: 2em;
+			}
+		.banner .banner-content h4
+			{
+				font-size: 1em;
+			}
+		.introduction .introduction-content h2
+			{
+				font-size: 1.2em;
+			}
+		.introduction .introduction-content p
+			{
+				font-size: 11px;
+			}
+		.information-1 .information-container .card .detail h2
+			{
+				font-size: 1em;
+			}
+		.introduction .planet-introduction h2
+			{
+				font-size: 1.2em;
+			}
+		.introduction .planet-introduction p
+			{
+				font-size: 11px;
+			}
+
+		.card_solar .planetcard_solar .content_solar
+		{
+			padding: 30px;
+		}
+		.card_solar .planetcard_solar img
+		{
+			height: 160px;
+		}
+		.card_solar .planetcard_solar:hover img
+		{
+			height: 140px;
+		}
+		.card_solar .planetcard_solar #sun_img,
+		.card_solar .planetcard_solar #mercury_img,
+		.card_solar .planetcard_solar #venus_img,
+		.card_solar .planetcard_solar #earth_img,
+		.card_solar .planetcard_solar #mars_img,
+		.card_solar .planetcard_solar #jupiter_img,
+		.card_solar .planetcard_solar #saturn_img,
+		.card_solar .planetcard_solar #uranus_img,
+		.card_solar .planetcard_solar #neptune_img
+		{
+			height: 160px;
+		}
+		.card_solar .planetcard_solar:hover #sun_img,
+		.card_solar .planetcard_solar:hover #mercury_img,
+		.card_solar .planetcard_solar:hover #venus_img,
+		.card_solar .planetcard_solar:hover #earth_img,
+		.card_solar .planetcard_solar:hover #mars_img,
+		.card_solar .planetcard_solar:hover #jupiter_img,
+		.card_solar .planetcard_solar:hover #saturn_img,
+		.card_solar .planetcard_solar:hover #uranus_img,
+		.card_solar .planetcard_solar:hover #neptune_img
+		{
+			height: 140px;
+		}
+	}
+

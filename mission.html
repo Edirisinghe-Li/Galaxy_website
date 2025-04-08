@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>Galaxy Network</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav>
+    	<a href="#" class="logo"><img src="img/logo.png">Galaxy</a>
+    	<div class="navbar">
+        	<div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+        	<li><a href="index.html">Home</a></li>
+            <li class="active"><a href="mission.html">Mission</a></li>
+            <li><a href="solar_system.html">Solar System</a></li>
+            <li><a href="space_tech.html">Space Tech</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="landing"></section>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header=document.querySelector("nav");
+			header.classList.toggle("sticky",window.scrollY>0);
+		})
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		$(document).on('click','.nav-links li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+	<section id="banner_mission" class="banner">
+		<div class="banner-content">
+			<h2>Space Missions</h2>
+			<br>
+			<h4>The Path To New Discovery</h4>
+		</div>
+	</section>
+	<section id="introduction" class="introduction">
+		<div class="introduction-content">
+			<h2>What Is Space Mission?</h2>
+			<p>A space mission is a carefully planned journey or operation carried out using spacecraft or satellites to explore, study, or utilize outer space. These missions are organized by space agencies such as NASA (USA), ESA (Europe), Roscosmos (Russia), ISRO (India), and CNSA (China), and they can be either manned (with humans on board) or unmanned (robotic). Each mission is designed with a specific goal—whether it's reaching the Moon, studying a planet, launching a satellite, or conducting scientific experiments in space.<br>
+
+			There are various types of space missions, depending on their objectives. Some are exploratory, aiming to study celestial bodies like the Moon, Mars, or distant planets. Others are observational, using telescopes or satellites to observe stars, galaxies, or the Earth itself. There are also communications missions, which involve deploying satellites for internet, television, GPS, and more. Additionally, research missions allow scientists to conduct experiments in microgravity or test new technologies for future space travel.<br>
+
+			The success of a space mission requires intense planning, advanced engineering, and rigorous testing. It begins with mission design, including defining goals, choosing the spacecraft type, and planning the launch and landing. Engineers build and test the spacecraft, while scientists prepare experiments or tools needed for data collection. After launch, the mission enters its operational phase, where the spacecraft or satellite carries out its tasks while being monitored from mission control on Earth.<br>
+
+			Space missions have significantly advanced our understanding of the universe. They have revealed the structure of galaxies, the composition of distant planets, the behavior of black holes, and even helped us learn more about Earth’s climate and resources. Manned missions have shown us how humans can live and work in space, while robotic missions have gone where humans cannot yet travel, such as deep into the outer solar system.<br>
+
+			In the future, space missions are expected to expand even more, with goals like returning humans to the Moon, sending people to Mars, building space habitats, and mining asteroids. These missions will rely on international cooperation, new technology, and a continued desire to explore the unknown. Ultimately, space missions represent humanity’s greatest efforts to understand our place in the universe and push the boundaries of what is possible.
+			</p>
+		</div>
+	</section>
+	<section class="banner2">
+    	<img src="img/2.jpg" class="fitBg">
+    </section>
+    <section class="introduction">
+		<center>
+			<div class="mission_container">
+				<h3><u>Historic Human Spaceflight Missions</u></h3>
+				<br>
+				<br>
+				<ul class="mission">
+					<li>Vostok 1 (1961) – First human in space (Yuri Gagarin, USSR)</li>
+					<li>Apollo 11 (1969) – First humans on the Moon (Neil Armstrong and Buzz Aldrin, USA)</li>
+					<li>Apollo 13 (1970) – Successful failure; crew returned safely after a critical malfunction</li>
+					<li>Skylab (1973–1979) – First U.S. space station</li>
+					<li>Salyut & Mir Programs (1971–2001) – Soviet/Russian space stations with long-term human missions</li>
+					<li>Space Shuttle Program (1981–2011) – Reusable spacecraft by NASA for human spaceflight</li>
+					<li>International Space Station (ISS) (2000–present) – Joint international project for long-term human space habitation</li>
+				</ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h3><u>Unmanned Planetary and Deep Space Missions</u></h3>
+				<br>
+				<br>
+				<ul class="mission">
+					<li>Luna 2 (1959) – First human-made object to impact the Moon (USSR)</li>
+					<li>Pioneer 10 (1972) – First spacecraft to travel through the asteroid belt and fly past Jupiter</li>
+					<li>Voyager 1 & 2 (1977) – Explored outer planets; Voyager 1 is now in interstellar space</li>
+					<li>Galileo (1989–2003) – Studied Jupiter and its moons</li>
+					<li>New Horizons (2006–present) – Flew past Pluto in 2015</li>
+					<li>Juno (2011–present) – Currently studying Jupiter's atmosphere and magnetic field</li>
+					<li>Parker Solar Probe (2018–present) – Closest-ever approach to the Sun</li>
+					<li>James Webb Space Telescope (2021–present) – Next-generation space telescope for deep space observation</li>
+				</ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h3><u>Satellite & Observatory Missions</u></h3>
+				<br>
+				<br>
+				<ul class="mission">
+					<li>Hubble Space Telescope (1990–present) – Revolutionized astronomy with deep-space images</li>
+					<li>Chandra X-ray Observatory (1999–present) – Observes X-ray emissions from high-energy objects</li>
+					<li>Kepler Space Telescope (2009–2018) – Discovered thousands of exoplanets</li>
+					<li>Gaia (2013–present) – Mapping the stars of the Milky Way with high precision</li>
+				</ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				</div>
+		</center>
+	</section>
+	<div class="footer">
+		<ul class="sci">
+			<li style="--i:1;"><a href="https://www.facebook.com/NelligalaInternationalBuddhistCentre/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li style="--i:2;"><a href="https://twitter.com/search?q=%23Nelligala"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li style="--i:3;"><a href="https://www.youtube.com/results?search_query=nelligala+temple"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+		</ul>
+		<h4 class="copyrightText">Copyright ©2021 <a href="https://www.linkedin.com/in/e-a-d-d-lakmali-07156334a/">E.A.D.D.Lakmali</a>. All rights reserved.</h4>
+    </div>
+</body>
+</html>
+

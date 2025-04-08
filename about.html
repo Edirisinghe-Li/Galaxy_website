@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>Galaxy Network</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav>
+    	<a href="#" class="logo"><img src="img/logo.png">Galaxy</a>
+    	<div class="navbar">
+        	<div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="solar_system.html">Solar System</a></li>
+            <li><a href="space_tech.html">Space Tech</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="landing"></section>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header=document.querySelector("nav");
+			header.classList.toggle("sticky",window.scrollY>0);
+		})
+	</script>
+	<script type="text/javascript">
+		$(document).on('click','.nav-link li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		$(document).on('click','.nav-links li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+	<section id="banner" class="banner">
+		<div class="banner-content">
+			<h2>About Us</h2>
+			<br>
+			<h4>The Path To New Discovery</h4>
+		</div>
+	</section>
+	<script src="anime.min.js"></script>
+	<script>
+		const container = document.querySelector('.banner-content')
+		for (var i = 0; i <= 7; i++){
+			const blocks = document.createElement('div');
+			blocks.classList.add('block');
+			container.appendChild(blocks);
+		}
+		
+		function animateBlocks(){
+			anime({
+				targets:'.block',
+				translateX: function(){
+					return anime.random(-700,700);
+				},
+				translateY: function(){
+					return anime.random(-500,500);
+				},
+				scale: function(){
+					return anime.random(1,5);
+				},
+				
+				easing: 'linear',
+				duration: 3000,
+				delay: anime.stagger(10),
+				complete: animateBlocks,
+			})
+		}
+		animateBlocks()
+	</script>
+	<section id="introduction" class="introduction">
+		<div class="introduction-content">
+			<h2>Welcome to the Wonders of the Galaxy</h2>
+			<p>Step into the vastness of the universe and explore the incredible mysteries of our galaxy and beyond. From dazzling stars and majestic planets to awe-inspiring black holes and space missions, this site is your gateway to discovering the wonders of outer space. Whether you're a curious student, an astronomy enthusiast, or just fascinated by the cosmos, journey with us through space and time as we uncover the secrets of the universe.
+			</p>
+		</div>
+	</section>
+	<section id="information-1" class="information-1">
+    	<div class="information-container">
+        	<div class="card">
+            	<div class="imgBox">
+                	<img src="img/email.png">
+                </div>
+                <div class="detail">
+                	<h2>Email</h2>
+                    <p>example123@gmail.com</p>
+                    <a href="#"><span>Contact us</span></a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="imgBox">
+                	<img src="img/phone.png">
+                </div>
+                <div class="detail">
+                	<h2>Phone Number</h2>
+                    <p>+94 123 456 789</p>
+                    <a href="#"><span>Contact us</span></a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="imgBox">
+                	<img src="img/business.png">
+                </div>
+                <div class="detail">
+                	<h2>LinkedIn</h2>
+                    <p>www.linkedin.com</p>
+                    <a href="space_tech.html"><span>Read More</span></a>
+                </div>
+            </div>
+        </div>
+	</section>
+	<div class="footer" >
+		<ul class="sci">
+			<li style="--i:1;"><a href="https://www.facebook.com/NelligalaInternationalBuddhistCentre/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li style="--i:2;"><a href="https://twitter.com/search?q=%23Nelligala"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li style="--i:3;"><a href="https://www.youtube.com/results?search_query=nelligala+temple"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+		</ul>
+		<h4 class="copyrightText">Copyright ©2021 <a href="https://www.linkedin.com/in/e-a-d-d-lakmali-07156334a/">E.A.D.D.Lakmali</a>. All rights reserved.</h4>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>Galaxy Network</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav>
+    	<a href="#" class="logo"><img src="img/logo.png">Galaxy</a>
+    	<div class="navbar">
+        	<div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li class="active"><a href="solar_system.html">Solar System</a></li>
+            <li><a href="space_tech.html">Space Tech</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="landing"></section>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header=document.querySelector("nav");
+			header.classList.toggle("sticky",window.scrollY>0);
+		})
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		$(document).on('click','.nav-links li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+	<section id="banner" class="banner">
+		<div class="banner-content">
+			<h2>Solar System</h2>
+			<br>
+			<h4>Eight Planets, One Star, Endless Fascination.</h4>
+		</div>
+	</section>
+	<script src="anime.min.js"></script>
+	<script>
+		const container = document.querySelector('.banner-content')
+		for (var i = 0; i <= 7; i++){
+			const blocks = document.createElement('div');
+			blocks.classList.add('block');
+			container.appendChild(blocks);
+		}
+		
+		function animateBlocks(){
+			anime({
+				targets:'.block',
+				translateX: function(){
+					return anime.random(-700,700);
+				},
+				translateY: function(){
+					return anime.random(-500,500);
+				},
+				scale: function(){
+					return anime.random(1,5);
+				},
+				
+				easing: 'linear',
+				duration: 3000,
+				delay: anime.stagger(10),
+				complete: animateBlocks,
+			})
+		}
+		animateBlocks()
+	</script>
+	<section class="card_solar">
+		<div class="planetcard_solar" id="sun">
+			<div class="content_solar">
+				<h2>Sun</h2>
+				<p>The Sun is a massive, glowing ball of hot gases and the central star of our solar system. It provides the heat and light necessary for life on Earth and keeps all the planets in orbit with its gravity.
+				</p>
+				
+			</div>
+			<img id="sun_img" src="img/sun.png">
+		</div>
+		<div class="planetcard_solar" id="mercury">
+			<div class="content_solar">
+				<h2>Mercury</h2>
+				<p>Mercury is the smallest and closest planet to the Sun, with extreme temperatures and no atmosphere to trap heat. Its surface is rocky and heavily cratered, similar to the Moon.
+				</p>
+				
+			</div>
+			<img id="mercury_img" src="img/mercury.png">
+		</div>
+		<div class="planetcard_solar" id="venus">
+			<div class="content_solar">
+				<h2>Venus</h2>
+				<p>Venus is the hottest planet in the solar system due to its thick atmosphere of carbon dioxide. It's often called Earth's "sister planet" because of its similar size and structure.
+				</p>
+				
+			</div>
+			<img id="venus_img" src="img/venus.png">
+		</div>
+		<div class="planetcard_solar" id="earth">
+			<div class="content_solar">
+				<h2>Earth</h2>
+				<p>Earth is the only known planet to support life, with water, an oxygen-rich atmosphere, and a stable climate. It orbits the Sun at the perfect distance for life to thrive.
+				</p>
+				
+			</div>
+			<img id="earth_img" src="img/earth.png">
+		</div>
+		<div class="planetcard_solar" id="mars">
+			<div class="content_solar">
+				<h2>Mars</h2>
+				<p>Mars is known as the "Red Planet" because of its iron-rich dust and soil. It has the largest volcano and canyon in the solar system and is a major target for future human missions.
+				</p>
+				
+			</div>
+			<img id="mars_img" src="img/mars.png">
+		</div>
+		<div class="planetcard_solar" id="jupiter">
+			<div class="content_solar">
+				<h2>Jupiter</h2>
+				<p>Jupiter is the largest planet in the solar system and is made mostly of gas. It has a giant red storm, called the Great Red Spot, and over 90 known moons.
+				</p>
+				
+			</div>
+			<img id="jupiter_img" src="img/jupiter.png">
+		</div>
+		<div class="planetcard_solar" id="saturn">
+			<div class="content_solar">
+				<h2>Saturn</h2>
+				<p>Saturn is famous for its beautiful, bright rings made of ice and rock particles. It’s a gas giant like Jupiter and has many moons, including Titan, which has a thick atmosphere.
+				</p>
+				
+			</div>
+			<img id="saturn_img" src="img/saturn.png">
+		</div>
+		<div class="planetcard_solar" id="uranus">
+			<div class="content_solar">
+				<h2>Uranus</h2>
+				<p>Uranus is an icy gas giant that rotates on its side, making its seasons extremely unique. Its pale blue color comes from methane gas in its atmosphere.
+				</p>
+				
+			</div>
+			<img id="uranus_img" src="img/uranus.png">
+		</div>
+		<div class="planetcard_solar" id="neptune">
+			<div class="content_solar">
+				<h2>Neptune</h2>
+				<p>Neptune is the farthest planet from the Sun and is known for its deep blue color and fierce winds. It has dark storms and a cold, dynamic atmosphere full of activity.
+				</p>
+				
+			</div>
+			<img id="neptune_img" src="img/neptun.png">
+		</div>
+
+	</section>
+	<div class="footer">
+		<ul class="sci">
+			<li style="--i:1;"><a href="https://www.facebook.com/NelligalaInternationalBuddhistCentre/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li style="--i:2;"><a href="https://twitter.com/search?q=%23Nelligala"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li style="--i:3;"><a href="https://www.youtube.com/results?search_query=nelligala+temple"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+		</ul>
+		<h4 class="copyrightText">Copyright ©2021 <a href="https://www.linkedin.com/in/e-a-d-d-lakmali-07156334a/">E.A.D.D.Lakmali</a>. All rights reserved.</h4>
+    </div>
+</body>
+</html>
+

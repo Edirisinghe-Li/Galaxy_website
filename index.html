@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>Galaxy Network</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav>
+    	<a href="#" class="logo"><img src="img/logo.png">Galaxy</a>
+    	<div class="navbar">
+        	<div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+        	<li class="active"><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="solar_system.html">Solar System</a></li>
+            <li><a href="space_tech.html">Space Tech</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="landing"></section>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header=document.querySelector("nav");
+			header.classList.toggle("sticky",window.scrollY>0);
+		})
+	</script>
+	<script type="text/javascript">
+		$(document).on('click','.nav-link li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		$(document).on('click','.nav-links li',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+	</script>
+	<section id="banner" class="banner">
+		<div class="banner-content">
+			<h2>Galaxy</h2>
+			<br>
+			<h4>The Path To New Discovery</h4>
+		</div>
+	</section>
+	<script src="anime.min.js"></script>
+	<script>
+		const container = document.querySelector('.banner-content')
+		for (var i = 0; i <= 7; i++){
+			const blocks = document.createElement('div');
+			blocks.classList.add('block');
+			container.appendChild(blocks);
+		}
+		
+		function animateBlocks(){
+			anime({
+				targets:'.block',
+				translateX: function(){
+					return anime.random(-700,700);
+				},
+				translateY: function(){
+					return anime.random(-500,500);
+				},
+				scale: function(){
+					return anime.random(1,5);
+				},
+				
+				easing: 'linear',
+				duration: 3000,
+				delay: anime.stagger(10),
+				complete: animateBlocks,
+			})
+		}
+		animateBlocks()
+	</script>
+	<section id="introduction" class="introduction">
+		<div class="introduction-content">
+			<h2>What Is Galaxy?</h2>
+			<p>A galaxy is a massive system of stars, gas, dust, dark matter, and other celestial objects bound together by gravity. Galaxies come in a wide range of sizes, containing anywhere from millions to trillions of stars. They are the fundamental building blocks of the universe, and there are billions of them scattered across the cosmos. Each galaxy has a central core, which often hosts a supermassive black hole, and they can take on different shapes such as spiral, elliptical, or irregular.
+				<br>
+				<br>
+
+			One of the most well-known galaxies is the Milky Way, which is the galaxy that includes our solar system. It is a barred spiral galaxy with a flat, rotating disk containing stars, planets, and other materials. The Milky Way is vast—about 100,000 light-years in diameter—and our solar system is located roughly halfway between the center and the edge of the galaxy. When we look up at the night sky and see a band of light stretching across it, we’re seeing a part of the Milky Way from within.
+				<br>
+				<br>
+
+			Galaxies do not exist in isolation—they are often found in groups or clusters, and even those clusters can be part of larger superclusters. They can interact with each other through gravitational forces, sometimes merging to form even larger galaxies. Over billions of years, these interactions have shaped the universe as we see it today. The study of galaxies helps scientists understand not only the structure of the universe but also its history and future evolution.
+			</p>
+		</div>
+		<center>
+		<div class="introduction-video">
+			<video autoplay muted loop>
+            	<source src="video/1.mp4" type="video/mp4">
+            </video>
+		</div>
+		</center>
+	</section>
+	<section id="information-1" class="information-1">
+    	<div class="information-container">
+        	<div class="card">
+            	<div class="imgBox">
+                	<img src="img/4.png">
+                </div>
+                <div class="detail">
+                	<h2>Space Missions</h2>
+                    <p>Space missions are planned journeys or operations carried out by spacecraft to explore, observe, or perform scientific and technological tasks beyond Earth’s atmosphere.</p>
+                    <a href="mission.html"><span>Read More</span></a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="imgBox">
+                	<img src="img/gallaxy.png">
+                </div>
+                <div class="detail">
+                	<h2>Solar Systems</h2>
+                    <p>The solar system is a collection of the Sun and all the celestial bodies that orbit it, including planets, moons, asteroids, and comets, bound together by gravity.</p>
+                    <a href="solar_system.html"><span>Read More</span></a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="imgBox">
+                	<img src="img/space.png">
+                </div>
+                <div class="detail">
+                	<h2>Space Tech</h2>
+                    <p>Space technology refers to the tools, systems, and innovations developed to explore, study, and utilize outer space, including satellites, spacecraft, and space stations.</p>
+                    <a href="space_tech.html"><span>Read More</span></a>
+                </div>
+            </div>
+        </div>
+	</section>
+	<section class="banner2">
+    	<img src="img/bg2.jpg" class="fitBg">
+    </section>
+    <section class="introduction">
+    	<div class="planet-introduction">
+		<h2>The Elements of a Galaxy</h2>
+		<p>A galaxy is a vast, gravitationally bound system that contains a multitude of stars, gas, dust, and dark matter. Galaxies vary in size, shape, and structure, but they all share several fundamental components that shape their existence. The primary elements of a galaxy include stars, gas, dust, dark matter, and their overarching structure.
+
+	At the heart of most galaxies lies a supermassive black hole, which influences the galaxy's formation and evolution. This black hole is surrounded by a dense concentration of stars, gas, and dust, collectively referred to as the galactic nucleus. The stars in a galaxy can range from young, hot stars to older, cooler ones, contributing to the galaxy’s light and energy output. These stars are often grouped together in stellar clusters, which can be either open clusters (loosely bound) or globular clusters (tightly bound).
+			<br><br>
+
+	Galaxies are also filled with large amounts of gas and dust, primarily composed of hydrogen and helium. This material is the birthplace of new stars and is distributed unevenly, forming clouds known as nebulae. Gas and dust interact with stellar radiation, giving rise to various astronomical phenomena like supernovae and stellar winds. As new stars are born, they push away surrounding gas, and the cycle of star formation continues.
+
+	An often invisible but essential component of a galaxy is dark matter, a mysterious form of matter that does not emit light. Dark matter makes up a significant portion of a galaxy's mass, influencing its gravitational pull and overall structure. Although it cannot be directly observed, its presence is inferred from its effects on the movement of visible matter.
+			<br><br>
+
+	The structure of a galaxy is another defining feature. Galaxies come in various shapes, such as spiral, elliptical, and irregular. The Milky Way, for example, is a spiral galaxy, characterized by its flat disk, central bulge, and spiral arms.
+
+	In summary, galaxies are complex systems composed of stars, gas, dust, dark matter, and black holes. These elements interact in intricate ways, making galaxies the fascinating and dynamic entities that they are.</p>
+		</div>
+	</section>
+    <section id="planet" class="planet">
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Gallaxy</h2>
+				<p>A galaxy is a massive system of stars, planets, gas, dust, and dark matter held together by gravity. Our home, the Milky Way, is just one of billions of galaxies in the universe.
+</p>
+				
+			</div>
+			<img src="img/gallaxy.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Sun</h2>
+				<p>The Sun is a medium-sized star at the center of our solar system, providing light and energy that supports life on Earth. It is composed mostly of hydrogen and helium and undergoes nuclear fusion to produce heat.
+</p>
+				
+			</div>
+			<img src="img/sun.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Mercury</h2>
+				<p>Mercury is the smallest and closest planet to the Sun, with a rocky surface and extreme temperature differences between day and night. It has no atmosphere to retain heat, making it one of the most hostile planets.
+</p>
+				
+			</div>
+			<img src="img/mercury.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Venus</h2>
+				<p>Venus is similar in size to Earth but has a thick, toxic atmosphere mainly composed of carbon dioxide. Its surface is extremely hot due to a runaway greenhouse effect.
+</p>
+				
+			</div>
+			<img src="img/venus.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Earth</h2>
+				<p>Earth is the only known planet to support life, with a balanced atmosphere, liquid water, and a magnetic field. It orbits the Sun once every 365 days and rotates on its axis every 24 hours.
+</p>
+				
+			</div>
+			<img src="img/earth.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Mars</h2>
+				<p>Mars is known as the Red Planet due to its iron-rich soil and dusty surface. It has polar ice caps and signs of ancient water flow, making it a target for exploration.
+</p>
+				
+			</div>
+			<img src="img/mars.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Jupiter</h2>
+				<p>Jupiter is the largest planet in the solar system, made mostly of gas with a massive magnetic field. It has at least 80 moons, including the volcanic moon Io and icy Europa.
+</p>
+				
+			</div>
+			<img src="img/jupiter.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Saturn</h2>
+				<p>Saturn is famous for its stunning ring system made of ice and rock particles. It is a gas giant with dozens of moons, including the intriguing Titan.
+</p>
+				
+			</div>
+			<img src="img/saturn.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Uranus</h2>
+				<p>Uranus is an ice giant with a pale blue color due to methane in its atmosphere. It rotates on its side, making its seasons extremely long and unusual.
+</p>
+				
+			</div>
+			<img src="img/uranus.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Neptune</h2>
+				<p>Neptune is a distant, cold gas giant with supersonic winds and a deep blue color. It has faint rings and several moons, including the large moon Triton.
+</p>
+				
+			</div>
+			<img src="img/neptun.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Pluto</h2>
+				<p>Pluto is a dwarf planet located in the Kuiper Belt, once considered the ninth planet. It has a thin atmosphere and a heart-shaped glacier on its surface.
+</p>
+				
+			</div>
+			<img src="img/pluto.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Moon</h2>
+				<p>The Moon is Earth's only natural satellite, influencing tides and lighting up the night sky. It has a rocky surface covered in craters and was the site of the first human landing in 1969.
+</p>
+				
+			</div>
+			<img src="img/moon.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Asteroid</h2>
+				<p>Asteroids are rocky objects that orbit the Sun, mostly found in the asteroid belt between Mars and Jupiter. They vary in size and shape, and some have collided with Earth in the past.
+</p>
+				
+			</div>
+			<img src="img/asteroid.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Comet</h2>
+				<p>Comets are icy bodies that release gas and dust when they approach the Sun, forming a glowing coma and a tail. They originate from the outer regions of the solar system.
+</p>
+				
+			</div>
+			<img src="img/1.png">
+		</div>
+		<div class="planet-card">
+			<div class="planet-content">
+				<h2>Black Hole</h2>
+				<p>A black hole is a region in space with an incredibly strong gravitational pull that not even light can escape. It forms from the collapse of massive stars and can warp space and time.
+</p>
+				
+			</div>
+			<img src="img/blackhole.png">
+		</div>
+	</section>
+	<div class="footer" >
+		<ul class="sci">
+			<li style="--i:1;"><a href="https://www.facebook.com/NelligalaInternationalBuddhistCentre/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li style="--i:2;"><a href="https://twitter.com/search?q=%23Nelligala"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li style="--i:3;"><a href="https://www.youtube.com/results?search_query=nelligala+temple"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+		</ul>
+		<h4 class="copyrightText">Copyright ©2021 <a href="https://www.linkedin.com/in/e-a-d-d-lakmali-07156334a/">E.A.D.D.Lakmali</a>. All rights reserved.</h4>
+    </div>
+</body>
+</html>
